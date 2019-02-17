@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="description" content="Find where to report issue with anything." />
+	<title>Where to Report</title>
+	<link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+
+
+</head>
+
+<body>
+	<a href="#main-content" class="skip-to-main-content">Skip to main Content</a>
+	<header class="main-header">
+
+		<a href="{{ '/' | url }}">
+			{% if page.fileSlug == '' %}
+			<h1 class="main-title">
+				{% else %}
+				<h2 class="main-title">
+					{% endif %}
+
+					🐞 Where to Report
+					{% if page.fileSlug == '' %}</h1>{% else %}</h2>{% endif %}
+
+		</a>
+	</header>
+
+	<main class="main-content" id="main-content">
+		{{content}}
+	</main>
+
+	<footer class="site-footer">
+		Made by
+		<a href="https://twitter.com/chinchang457" rel="external">
+			Kushagra Gour
+		</a>
+		<br>
+		<label><input type="checkbox" id="themeToggle"> Toggle dark theme</label>
+
+		<a href="{{ '/about/' | url }}">About</a>
+		<a href="https://github.com/chinchang/" rel="external">Contribute</a>
+	</footer>
+</body>
+
+</html>

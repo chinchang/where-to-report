@@ -1,0 +1,9 @@
+[Settings]
+ID = "wheretoreport"
+
+[build]
+  command = "yarn build"
+
+  base = "."
+
+  publish = "_site"

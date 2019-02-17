@@ -1,0 +1,12 @@
+[
+  {
+    "name": "React - A JavaScript library for building user interfaces",
+    "link": "https://reactjs.org/",
+    "reportingLink": "https://github.com/facebook/react/issues"
+  },
+  {
+    "name": "Web Maker",
+    "link": "https://webmakerapp.com",
+    "reportingLink": "https://github.com/chinchang/web-maker"
+  }
+]

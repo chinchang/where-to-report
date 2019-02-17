@@ -1,0 +1,16 @@
+{
+  "name": "wheretoreport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --quiet --serve --port=3000",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^0.7.1"
+  }
+}
