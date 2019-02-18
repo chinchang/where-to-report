@@ -3,14 +3,18 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Find where to report an issue with anything." />
 	<title>Where to Report?</title>
 	<meta property="og:title" content="Where to Report?" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://wheretoreport.xyz" />
 	<meta property="og:image" content="https://wheretoreport.xyz/images/social.png" />
-	<link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+
+	<!-- capture the CSS content as a Nunjucks variable -->
+	{% set css %}{% include "style.css" %}{% endset %}
+	<!-- feed it through our cssmin filter to minify -->
+	<style>{{css | cssmin | safe}}</style>
 </head>
 
 <body>
@@ -25,13 +29,17 @@
 					{% endif %}
 
 					🐞 Where to Report?
-					{% if page.fileSlug == '' %}</h1>{% else %}</h2>{% endif %}
+					{% if page.fileSlug == '' %}
+			</h1>
+			{% else %}
+			</h2>
+			{% endif %}
 
 		</a>
 	</header>
 
 	<main class="main-content" id="main-content">
-		{{content}}
+		{{content | safe}}
 	</main>
 
 	<footer class="site-footer">
@@ -41,9 +49,11 @@
 			Kushagra Gour
 		</a>
 		<br>
-		<label><input type="checkbox" id="themeToggle"> Toggle dark theme</label>
+		<label><input type="checkbox" id="themeToggle">
+			Toggle dark theme</label>
 
-		<a href="{{ '/about/' | url }}">About</a> <span aria-hidden>•</span>
+		<a href="{{ '/about/' | url }}">About</a>
+		<span aria-hidden="aria-hidden">•</span>
 		<a href="https://github.com/chinchang/where-to-report#add-to-list" rel="external">Add to directory</a>
 	</footer>
 

@@ -1,11 +1,8 @@
-module.exports = function(eleventyConfig) {
-  // Create a collection for blog posts only.
-  /* eleventyConfig.addCollection("learnPosts", collection => {
-    return collection.getFilteredByGlob("learn/*.md");
-  }); */
+const CleanCSS = require("clean-css");
 
-  eleventyConfig.addPairedShortcode("note", function(content) {
-    return `<div class="note">${content}</div>`;
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
   });
 
   eleventyConfig.addPassthroughCopy("css");

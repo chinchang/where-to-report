@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --quiet --serve --port=3000",
+    "start": "ELEVENTY_ENV=development eleventy --quiet --serve --port=3000",
     "build": "eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@11ty/eleventy": "^0.7.1"
+    "@11ty/eleventy": "^0.7.1",
+    "clean-css": "^4.2.1"
   }
 }
