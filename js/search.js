@@ -61,10 +61,10 @@ class SearchResults extends Component {
       results: [],
       isLoading: false
     };
-    this.search = debounce(this.search, 500);
+    this.search = debounce(this.search, 300);
   }
   search(term) {
-    console.log(term);
+    this.searchTerm = term;
     this.setState({ isLoading: true });
     if (!term || term.length < 3) {
       // lastSearchResultHash = '';
@@ -72,7 +72,10 @@ class SearchResults extends Component {
     }
 
     var matchingItems = data.filter(item => {
-      if ((item.name + "").toLowerCase().indexOf(term) !== -1) {
+      if (
+        (item.name + "").toLowerCase().indexOf(term) !== -1 ||
+        (item.link + "").toLowerCase().indexOf(term) !== -1
+      ) {
         return true;
       }
     });
@@ -96,6 +99,18 @@ class SearchResults extends Component {
                 .
               `}
         </p>
+        ${!this.state.isLoading && this.searchTerm
+          ? html`
+              <p>
+                No match found.${" "}
+                <a
+                  href="https://github.com/chinchang/where-to-report#add-to-list"
+                  rel="external"
+                  >Click here to add it if you come to know.</a
+                >
+              </p>
+            `
+          : null}
         <table class=${`${this.state.results.length ? "" : "v-h"}`}>
           <thead>
             <tr>
