@@ -30,7 +30,7 @@
   --color-anchor-bg-hover: midnightblue;
   --color-input-bg: rgba(255, 255, 255, 0.1);
   --color-focus-outline: orange;
-  --color-hr: rgba(255,255,255, 0.35);
+  --color-hr: rgba(255, 255, 255, 0.35);
   --color-table-heading-bg: rgba(0, 0, 0, 0.5);
   --color-table-row-bg: rgba(0, 0, 0, 0.3);
   --color-table-border: rgba(0, 0, 0, 0.8);
@@ -108,7 +108,12 @@ a[rel="external"] {
 hr {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-hr), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    var(--color-hr),
+    rgba(0, 0, 0, 0)
+  );
 }
 .sub-heading {
   margin-bottom: 3rem;
@@ -156,7 +161,7 @@ th {
   empty-cells: show;
   text-align: left;
 }
-tr:nth-child(2n+1) {
+tr:nth-child(2n + 1) {
   background: var(--color-table-row-bg);
 }
 footer {
