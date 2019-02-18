@@ -158,7 +158,6 @@ td,
 th {
   border: 1px solid var(--color-table-border);
   padding: 10px;
-  empty-cells: show;
   text-align: left;
 }
 tr:nth-child(2n + 1) {
@@ -168,8 +167,12 @@ footer {
   margin-top: 2rem;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   body {
     padding: 1em;
+  }
+  /* Only for home page */
+  h1.main-title {
+    font-size: 3rem;
   }
 }
