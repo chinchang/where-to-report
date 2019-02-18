@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://wheretoreport.netlify.com/* https://wheretoreport.xyz/:splat 301!
