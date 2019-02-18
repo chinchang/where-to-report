@@ -22,7 +22,7 @@ Found something missing? You can add the reporting link if you know it or simply
 
 Made by [Kushagra Gour](https://twitter.com/chinchang457) because he had trouble finding where to report issues.
 
-Built with [Eleventy](https://www.11ty.io/), [Preat](https://preactjs.com/) and [Netlify](https://netlify.com).
+Built with [Eleventy](https://www.11ty.io/), [Preact](https://preactjs.com/) and [Netlify](https://netlify.com).
 
 ## License
 
