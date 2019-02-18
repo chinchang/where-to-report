@@ -91,7 +91,7 @@ class SearchResults extends Component {
       <div>
         <p>
           ${this.state.isLoading
-            ? "Loading..."
+            ? "Finding..."
             : html`
                 .
               `}
