@@ -8,5 +8,45 @@
     "name": "Web Maker",
     "link": "https://webmakerapp.com",
     "reportingLink": "https://github.com/chinchang/web-maker"
+  },
+  {
+    "name": "Where to Report",
+    "link": "https://wheretoreport.xyz",
+    "reportingLink": "https://github.com/chinchang/where-to-report"
+  },
+  {
+    "name": "Google Chrome",
+    "link": "https://google.com/chrome/",
+    "reportingLink": "https://support.google.com/chrome/answer/95315?co=GENIE.Platform%3DDesktop&hl=en"
+  },
+  {
+    "name": "Mozilla Firefox",
+    "link": "https://www.mozilla.org/firefox/",
+    "reportingLink": "https://bugzilla.mozilla.org/"
+  },
+  {
+    "name": "Chromium",
+    "link": "https://www.chromium.org",
+    "reportingLink": "https://crbug.com/wizard"
+  },
+  {
+    "name": "Apple Mac OS X",
+    "link": "https://www.apple.com/macos/",
+    "reportingLink": "https://bugreport.apple.com/"
+  },
+  {
+    "name": "Sketch",
+    "link": "https://www.sketchapp.com/",
+    "reportingLink": "https://www.sketchapp.com/support/contact/"
+  },
+  {
+    "name": "Telegram",
+    "link": "https://telegram.org/support",
+    "reportingLink": "https://telegram.org/support"
+  },
+  {
+    "name": "CodeSandbox",
+    "link": "https://codesandbox.io/",
+    "reportingLink": "https://github.com/CompuIves/codesandbox-client/issues"
   }
 ]
