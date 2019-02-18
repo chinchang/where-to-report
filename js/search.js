@@ -70,7 +70,7 @@ class SearchResults extends Component {
       // lastSearchResultHash = '';
       return;
     }
-
+    term = term.toLowerCase();
     var matchingItems = data.filter(item => {
       if (
         (item.name + "").toLowerCase().indexOf(term) !== -1 ||
@@ -96,10 +96,10 @@ class SearchResults extends Component {
           ${this.state.isLoading
             ? "Finding..."
             : html`
-                .
+                ${" "}
               `}
         </p>
-        ${!this.state.isLoading && this.searchTerm
+        ${!this.state.isLoading && !this.state.results.length && this.searchTerm
           ? html`
               <p>
                 No match found.${" "}
