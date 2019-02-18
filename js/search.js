@@ -17,11 +17,11 @@ function toggleDarkTheme() {
   if (document.body.classList.contains("theme-dark")) {
     document.body.classList.remove("theme-dark");
     themeToggle.checked = false;
-    localStorage.setItem(localStorageKeys.THEME, "light");
+    localStorage.removeItem(localStorageKeys.THEME);
   } else {
     document.body.classList.add("theme-dark");
     themeToggle.checked = true;
-    localStorage.removeItem(localStorageKeys.THEME);
+    localStorage.setItem(localStorageKeys.THEME, "dark");
   }
 }
 themeToggle.addEventListener("change", e => {
