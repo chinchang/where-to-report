@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Find where to report an issue with anything." />
+
+	<link rel="shortcut icon" href="/images/favicon.png">
 	<title>Where to Report?</title>
 	<meta property="og:title" content="Where to Report?" />
 	<meta property="og:type" content="website" />
@@ -14,7 +16,9 @@
 	<!-- capture the CSS content as a Nunjucks variable -->
 	{% set css %}{% include "style.css" %}{% endset %}
 	<!-- feed it through our cssmin filter to minify -->
-	<style>{{css | cssmin | safe}}</style>
+	<style>
+		{{css | cssmin | safe}}
+								</style>
 </head>
 
 <body>
