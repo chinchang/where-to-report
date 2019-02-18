@@ -4,7 +4,7 @@ Discovered an issue with a website, app or anything else? Want to report it to t
 
 ## Add to List
 
-Found something missing? There are 2 ways you can add to the list:
+Found something missing? You can add the reporting link if you know it or simply let me know what's missing. There are 2 ways you can add to the list:
 
 ### Experience with Github
 
