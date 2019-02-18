@@ -1,6 +1,6 @@
 # Where to Report
 
-Find where to report issues with anything.
+Discovered an issue with a website, app or anything else? Want to report it to the creators but don't know where? Search here.
 
 ## Add to List
 
