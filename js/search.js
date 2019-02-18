@@ -137,6 +137,12 @@ function init() {
   if (localStorage.getItem(localStorageKeys.THEME) === "dark") {
     toggleDarkTheme();
   }
+  // Read q=blahblah from url, if present
+  const searchQuery = location.search.match(/q\=([^&.]*)/);
+  if (searchQuery) {
+    window.searchTerm.value = searchQuery[1];
+  }
+
   fetch("_data/list.json")
     .then(res => res.json())
     .then(res => (data = res));
