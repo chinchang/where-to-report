@@ -89,8 +89,14 @@ class SearchResults extends Component {
   render() {
     return html`
       <div>
-        <p>${this.state.isLoading ? "Loading..." : ""}</p>
-        <table>
+        <p>
+          ${this.state.isLoading
+            ? "Loading..."
+            : html`
+                .
+              `}
+        </p>
+        <table class=${`${this.state.results.length ? "" : "v-h"}`}>
           <thead>
             <tr>
               <th>Name</th>
@@ -104,8 +110,9 @@ class SearchResults extends Component {
                 <td>
                   <a
                     aria-label=${`Reporting link for ${result.name}`}
+                    rel="external"
                     href=${result.reportingLink}
-                    >Report Link</a
+                    >Report here</a
                   >
                 </td>
               </tr>
@@ -127,7 +134,7 @@ function renderComponents() {
 }
 
 function init() {
-  if (localStorage.getItem(localStorageKeys.THEME) === "light") {
+  if (localStorage.getItem(localStorageKeys.THEME) === "dark") {
     toggleDarkTheme();
   }
   fetch("_data/list.json")

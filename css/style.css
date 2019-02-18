@@ -4,12 +4,37 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-body-bg: #f5f5f5;
+  --color-body-fg: #333;
+  --color-headings: #000;
+  --color-anchor: purple;
+  --color-anchor-bg-hover: #c9b7d0;
+  --color-input-bg: white;
+  --color-input-fg: inherit;
+  --color-focus-outline: blue;
+
+  --site-max-width: 900px;
+  --padding-base: 1em;
+}
+
+.theme-dark {
+  --color-body-bg: #001f3f;
+  --color-body-fg: #c4c3ce;
+  --color-headings: #fff;
+  --color-anchor: #01ff70;
+  --color-anchor-bg-hover: midnightblue;
+  --color-input-bg: rgba(255, 255, 255, 0.1);
+  /* --color-input-bg: rgba(255, 255, 255, 0.1); */
+  --color-focus-outline: orange;
+}
+
 html {
   font-size: 1.5rem;
 }
 body {
-  color: #333;
-  background: #f5f5f5;
+  color: var(--color-body-fg);
+  background-color: var(--color-body-bg);
   /* font-size: 1.5rem; */
   line-height: 1.4;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -17,18 +42,51 @@ body {
   padding: 1em;
   margin: 0;
   text-align: center;
+  max-width: var(--site-max-width);
+  margin: 0 auto;
 }
+*:focus {
+  outline-color: var(--color-focus-outline);
+  outline-width: 3px;
+  outline-style: solid;
+  outline-offset: 2px;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #000;
+  color: var(--color-headings);
+}
+a {
+  color: var(--color-anchor);
 }
 
 a:hover {
-  background-color: paleturquoise;
+  background-color: var(--color-anchor-bg-hover);
+}
+/* a[href*="//"]:not([href*="wheretoreport.xyz"]) { */
+a[rel="external"] {
+  background-position: top 0.1em right 0.1em;
+  background-repeat: no-repeat;
+  background-size: 0.6em 0.6em;
+  padding-right: 0.9em;
+  background-image: url("data:image/svg+xml,%3csvg width='1792' height='1792' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1408 928v320q0 119-84.5 203.5T1120 1536H288q-119 0-203.5-84.5T0 1248V416q0-119 84.5-203.5T288 128h704q14 0 23 9t9 23v64q0 14-9 23t-23 9H288q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113V928q0-14 9-23t23-9h64q14 0 23 9t9 23zm384-864v512q0 26-19 45t-45 19-45-19l-176-176-652 652q-10 10-23 10t-23-10L695 983q-10-10-10-23t10-23l652-652-176-176q-19-19-19-45t19-45 45-19h512q26 0 45 19t19 45z' fill='currentColor'/%3e%3c/svg%3e");
+}
+
+.v-h {
+  visibility: hidden;
+}
+.visually-hidden {
+  /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
 }
 .skip-to-main-content {
   opacity: 0;
@@ -37,19 +95,33 @@ a:hover {
 .skip-to-main-content:focus {
   opacity: 1;
 }
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
+}
 .main-content {
-  max-width: 900px;
-  min-height: 50vh;
-  margin: 0 auto;
+  min-height: 60vh;
 }
 label {
   display: block;
   margin-bottom: 0.5rem;
 }
+input {
+  background-color: var(--color-input-bg);
+  color: var(--color-input-fg);
+  /* border-color: var(--color-input-border); */
+}
 .search-input {
   padding: 1rem;
   font-size: 1rem;
   width: 80%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  padding-left: 70px;
+  background-size: 52px;
+  background-position: left center;
+  border: 2px solid currentColor;
 }
 table {
   border-collapse: collapse;
