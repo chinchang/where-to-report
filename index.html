@@ -2,10 +2,16 @@
 layout: layouts/default
 ---
 
-<p class="sub-heading">Discovered an issue with a website, app or anything else? Want to report it to the creators but
-        don't know where?
-        Search here.</p>
-<label for="searchTerm">What do you want to report for?</label>
+<p class="sub-heading">
+  Discovered an issue with a website, app or anything else? Want to report it to
+  the creators but don't know where? Search here.
+</p>
+<label for="searchTerm" aria-describedby="examples"
+  >What do you want to report for?</label
+>
+<p id="examples">
+  <strong>Example searches</strong>: Chrome, react, amazon, gmail.com etc
+</p>
 <input class="search-input" id="searchTerm" autocomplete="off" />
 
 <div id="preactRoot"></div>
