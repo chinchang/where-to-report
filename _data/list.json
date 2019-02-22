@@ -48,5 +48,21 @@
     "name": "CodeSandbox",
     "link": "https://codesandbox.io/",
     "reportingLink": "https://github.com/CompuIves/codesandbox-client/issues"
+  },
+  {
+    "name": "Microsoft Edge",
+    "link": "https://www.microsoft.com/en-in/windows/microsoft-edge",
+    "reportingLink": "http://msft.social/b1DRKm"
+  },
+  {
+    "name": "Loremizer browser extension",
+    "link": "https://kushagragour.in/lab/loremizer/",
+    "reportingLink": "https://github.com/chinchang/loremizer/issues"
+  },
+  {
+    "name": "Smashing Magazine",
+    "link": "https://www.smashingmagazine.com/",
+    "reportingLink": "https://www.smashingmagazine.com/contact/"
   }
+  
 ]
