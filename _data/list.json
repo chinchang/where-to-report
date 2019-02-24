@@ -63,6 +63,16 @@
     "name": "Smashing Magazine",
     "link": "https://www.smashingmagazine.com/",
     "reportingLink": "https://www.smashingmagazine.com/contact/"
+  },
+  {
+    "name": "Facebook",
+    "link": "https://facebook.com",
+    "reportingLink": "https://www.facebook.com/whitehat/report/"
+  },
+  {
+    "name": "Google",
+    "link": "https://www.google.com",
+    "reportingLink": "https://www.google.com/appserve/security-bugs/m2/new"
   }
   
 ]
