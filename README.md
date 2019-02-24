@@ -24,6 +24,10 @@ Made by [Kushagra Gour](https://twitter.com/chinchang457) because he had trouble
 
 Built with [Eleventy](https://www.11ty.io/), [Preact](https://preactjs.com/) and [Netlify](https://netlify.com).
 
+## Contributors
+
+[✌ Misir Jafarov](https://github.com/misircoder)
+
 ## License
 
 MIT Licensed.
